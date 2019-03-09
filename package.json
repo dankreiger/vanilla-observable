@@ -1,0 +1,24 @@
+{
+  "name": "observable_pattern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "helpers.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development --hotOnly",
+    "build": "webpack -p"
+  },
+  "keywords": [],
+  "author": "Dan Kreiger <dan@dankreiger.com> (http://www.dankreiger.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "2.1.1",
+    "node-sass": "4.11.0",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
+    "ts-loader": "5.3.3",
+    "typescript": "3.3.3333",
+    "webpack": "4.29.6",
+    "webpack-cli": "3.2.3",
+    "webpack-dev-server": "3.2.1"
+  }
+}
