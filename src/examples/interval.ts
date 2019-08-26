@@ -1,5 +1,6 @@
-import * as helpers from '../helpers/helpers';
-import { Observable, Observer } from '../observable';
+import * as helpers from "../helpers/helpers";
+import Observable from "../observable";
+import Observer from "../observer.interface";
 
 const interval = (milliseconds = 0) => {
   return new Observable((observer: Observer) => {

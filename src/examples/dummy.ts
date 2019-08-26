@@ -1,7 +1,7 @@
-import { Observer } from '../observable';
+import Observer from "../observer.interface";
 
 export const dummySubscriptionFunction = (observer: Observer) => {
-  observer.next('dummy data');
+  observer.next("dummy data");
   try {
     observer.complete();
   } catch (err) {

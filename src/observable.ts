@@ -1,16 +1,8 @@
-import './scss/styles.scss';
-import * as helpers from './helpers/helpers';
-import { startInterval, cleanupInterval } from './examples/interval';
-import { dummySubscriptionFunction } from './examples/dummy';
-import ExampleHelper from './helpers/ExampleHelper';
+import "./scss/styles.scss";
+import ExampleHelper from "./helpers/ExampleHelper";
+import Observer from "./observer.interface";
 
-export interface Observer {
-  next: Function;
-  error?: Function;
-  complete?: Function;
-}
-
-export class Observable {
+export default class Observable {
   constructor(private subscriptionFn: Function) {
     this.subscriptionFn = subscriptionFn;
   }
@@ -22,6 +14,5 @@ export class Observable {
 /**
  * @description run examples
  */
-
 const e = new ExampleHelper();
 e.init();

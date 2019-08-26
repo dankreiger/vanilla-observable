@@ -1,12 +1,12 @@
-import { cleanupInterval, startInterval } from '../examples/interval';
-import { Observable } from '../observable';
-import { dummySubscriptionFunction } from '../examples/dummy';
+import { cleanupInterval, startInterval } from "../examples/interval";
+import Observable from "../observable";
+import { dummySubscriptionFunction } from "../examples/dummy";
 
 export default class ExampleHelper {
   constructor() {}
   private prepareButtons() {
-    document.querySelector('.interval').addEventListener('click', () => {
-      if (document.body.classList.contains('subscribed')) {
+    document.querySelector(".interval").addEventListener("click", () => {
+      if (document.body.classList.contains("subscribed")) {
         cleanupInterval();
       } else {
         startInterval();
@@ -21,7 +21,7 @@ export default class ExampleHelper {
         console.log(s);
       },
       complete() {
-        console.log('done');
+        console.log("done");
       },
       error(err: any) {
         console.log(err);
