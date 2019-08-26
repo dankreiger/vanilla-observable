@@ -2,6 +2,7 @@ import './scss/styles.scss';
 import * as helpers from './helpers/helpers';
 import { startInterval, cleanupInterval } from './examples/interval';
 import { dummySubscriptionFunction } from './examples/dummy';
+import ExampleHelper from './helpers/ExampleHelper';
 
 export interface Observer {
   next: Function;
@@ -19,26 +20,8 @@ export class Observable {
 }
 
 /**
- * @description examples
+ * @description run examples
  */
 
-document.querySelector('.interval').addEventListener('click', () => {
-  if (document.body.classList.contains('subscribed')) {
-    cleanupInterval();
-  } else {
-    startInterval();
-  }
-});
-
-const dummy$ = new Observable(dummySubscriptionFunction);
-dummy$.subscribe({
-  next(s: string) {
-    console.log(s);
-  },
-  complete() {
-    console.log('done');
-  },
-  error(err: any) {
-    console.log(err);
-  }
-});
+const e = new ExampleHelper();
+e.init();
