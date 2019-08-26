@@ -1,5 +1,4 @@
 import Observer from "../observer.interface";
-import Observable from "../observable";
 
 export const dummySubscriptionFunction = (observer: Observer) => {
   observer.next("dummy data");
@@ -9,5 +8,3 @@ export const dummySubscriptionFunction = (observer: Observer) => {
     observer.error(err);
   }
 };
-
-export const dummy$ = new Observable(dummySubscriptionFunction);
