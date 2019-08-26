@@ -1,6 +1,5 @@
 import { cleanupInterval, startInterval } from "../examples/interval";
-import Observable from "../observable";
-import { dummySubscriptionFunction } from "../examples/dummy";
+import { dummy$ } from "../examples/dummy";
 
 export default class ExampleHelper {
   constructor() {}
@@ -15,7 +14,6 @@ export default class ExampleHelper {
   }
 
   private prepareDummy() {
-    const dummy$ = new Observable(dummySubscriptionFunction);
     dummy$.subscribe({
       next(s: string) {
         console.log(s);
