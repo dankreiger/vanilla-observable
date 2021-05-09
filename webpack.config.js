@@ -1,13 +1,14 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'development',
   entry: './src/observable.ts',
   devtool: 'inline-source-map',
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: 'babel-loader',
         exclude: /node_modules/
       },
       {

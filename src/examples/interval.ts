@@ -1,6 +1,6 @@
-import * as helpers from "../helpers/helpers";
-import Observable from "../observable";
-import Observer from "../observer.interface";
+import * as helpers from '../helpers/helpers';
+import Observable from '../observable';
+import Observer from '../observer.interface';
 
 const interval = (milliseconds = 0) => {
   return new Observable((observer: Observer) => {
@@ -13,7 +13,7 @@ const interval = (milliseconds = 0) => {
     return {
       unsubscribe() {
         clearInterval(id);
-      }
+      },
     };
   });
 };
@@ -25,7 +25,7 @@ export const startInterval = (): void => {
   subscription = interval(1000).subscribe({
     next(v: number) {
       helpers.printPuppyCount(v);
-    }
+    },
   });
 };
 

@@ -4,28 +4,31 @@
   "description": "",
   "scripts": {
     "start": "concurrently \"npm run dev\" \"npm run build\"",
-    "dev": "webpack-dev-server --open --mode development --hotOnly",
-    "build": "webpack -p --watch"
+    "dev": "webpack serve --open --mode development",
+    "build": "webpack --watch"
   },
   "keywords": [],
   "author": "Dan Kreiger <dan@dankreiger.com> (http://www.dankreiger.com/)",
   "license": "ISC",
   "devDependencies": {
-    "@commitlint/cli": "8.1.0",
-    "@commitlint/config-conventional": "8.1.0",
-    "concurrently": "4.1.2",
-    "css-loader": "3.2.0",
-    "husky": "3.0.4",
-    "lint-staged": "9.2.4",
-    "node-sass": "4.12.0",
-    "prettier": "1.18.2",
-    "sass-loader": "7.3.1",
-    "style-loader": "1.0.0",
-    "ts-loader": "6.0.4",
-    "typescript": "3.5.3",
-    "webpack": "4.39.2",
-    "webpack-cli": "3.3.7",
-    "webpack-dev-server": "3.8.0"
+    "@babel/core": "7.14.0",
+    "@babel/plugin-transform-typescript": "7.13.0",
+    "@babel/preset-typescript": "7.13.0",
+    "@commitlint/cli": "12.1.1",
+    "@commitlint/config-conventional": "12.1.1",
+    "babel-loader": "8.2.2",
+    "concurrently": "6.1.0",
+    "css-loader": "5.2.4",
+    "husky": "6.0.0",
+    "lint-staged": "11.0.0",
+    "node-sass": "6.0.0",
+    "prettier": "2.2.1",
+    "sass-loader": "11.0.1",
+    "style-loader": "2.0.0",
+    "typescript": "4.2.4",
+    "webpack": "5.36.2",
+    "webpack-cli": "4.7.0",
+    "webpack-dev-server": "3.11.2"
   },
   "husky": {
     "hooks": {
