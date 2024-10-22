@@ -11,9 +11,9 @@
   "author": "Dan Kreiger <dan@dankreiger.com> (http://www.dankreiger.com/)",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "7.14.0",
-    "@babel/plugin-transform-typescript": "7.13.0",
-    "@babel/preset-typescript": "7.13.0",
+    "@babel/core": "7.25.9",
+    "@babel/plugin-transform-typescript": "7.25.9",
+    "@babel/preset-typescript": "7.25.9",
     "@commitlint/cli": "12.1.1",
     "@commitlint/config-conventional": "12.1.1",
     "babel-loader": "8.2.2",
